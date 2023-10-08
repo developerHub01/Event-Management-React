@@ -11,7 +11,6 @@ import "./HomeBannerSlider.css";
 // import required modules
 import { EffectCreative, Autoplay } from "swiper/modules";
 import useFetch from "../../CustomHook/useFetch";
-import { LoadingContext } from "../../Context/LoadingProvider";
 
 const url =
   "https://raw.githubusercontent.com/developerHub01/Event-managemenet-fake-data/main/bannar-slider-data.json";
@@ -20,7 +19,7 @@ const HomeBannerSlider = () => {
   const { data, isLoading, getError } = useFetch(url);
   console.log(data);
   return (
-    <div className="w-full grid place-items-center lg:order-2">
+    <div className="w-full h-full grid place-items-center lg:order-2">
       {getError && <span>{getError}</span>}
       {isLoading ||
         (data && (
@@ -41,15 +40,15 @@ const HomeBannerSlider = () => {
               disableOnInteraction: true,
             }}
             modules={[EffectCreative, Autoplay]}
-            className="mySwiper w-full min-w-[250px] h-80 md:h-[440px]"
+            className="mySwiper w-full min-w-[250px]"
           >
             {isLoading ||
               data.map((item) => (
-                <SwiperSlide key={item.id} className="rounded-xl overflow-auto">
+                <SwiperSlide key={item.id} className="rounded-xl overflow-auto max-h-[450px]">
                   <img
                     src={item.imgLink}
                     alt=""
-                    className="w-full h-full object-cover"
+                    className="w-full object-cover"
                   />
                 </SwiperSlide>
               ))}
