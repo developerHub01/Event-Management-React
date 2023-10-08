@@ -9,33 +9,52 @@ import "swiper/css/navigation";
 
 import "./ClientSlider.css";
 
-// import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import ClientSlide from "./ClientSlide";
 
-export default function App() {
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import useFetch from "../../CustomHook/useFetch";
+
+const url =
+  "https://raw.githubusercontent.com/developerHub01/Event-managemenet-fake-data/main/client_review.json";
+const ClientSlider = () => {
+  const { data, isLoading, getError } = useFetch(url);
   return (
-    <>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-    </>
+    <div className="w-full col-span-2 px-3 flex-grow">
+      {getError && <span>{getError}</span>}
+      {isLoading ||
+        (data && (
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper p-2 flex"
+          >
+            {data &&
+              data.map((item) => (
+                <SwiperSlide key={item.id} className="w-full h-full">
+                  <ClientSlide {...item} />
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        ))}
+    </div>
   );
-}
+};
+
+export default ClientSlider;

@@ -1,7 +1,7 @@
 import React from "react";
 import HomeBanner from "../Components/HomeBanner";
 import AboutUs from "../Components/AboutUs";
-import ClientSection from "../Components/ClientSection";
+import ClientSection from "../Components/ClientSlider/ClientSection";
 
 const Home = () => {
   return (

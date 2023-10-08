@@ -19,7 +19,7 @@ const HomeBannerSlider = () => {
   const { data, isLoading, getError } = useFetch(url);
   console.log(data);
   return (
-    <div className="w-full h-full grid place-items-center lg:order-2">
+    <div className="w-full grid place-items-center lg:order-2">
       {getError && <span>{getError}</span>}
       {isLoading ||
         (data && (
@@ -48,7 +48,7 @@ const HomeBannerSlider = () => {
                   <img
                     src={item.imgLink}
                     alt=""
-                    className="w-full object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
               ))}

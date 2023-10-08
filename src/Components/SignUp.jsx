@@ -190,7 +190,7 @@ const SignUp = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="backdrop-blur-sm p-4 rounded-md text-center flex flex-col gap-5 justify-center items-center shadow-2xl">
+        <div className="backdrop-blur-sm p-4 rounded-md text-center flex flex-col gap-5 justify-center items-center shadow-2xlswiper-wrapper">
           <p className="text-white leading-relaxed">
             Join us! Register an account to access exclusive features and
             content. Sign up now for free.

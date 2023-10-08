@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <section className="w-full min-h-screen grid place-items-center">
       <div className="w-[90%] max-w-6xl mx-auto py-20 grid grid-cols-1 md:grid-cols-2 gap-10 gap-y-14 place-items-center">
-        <div className="min-h-[350px] w-full h-full relative flex justify-center">
+        <div className="min-h-[350px] max-h-[450px] w-full h-full relative flex justify-center">
           <img
             src={errorPage}
             alt=""
@@ -28,10 +28,10 @@ const AboutUs = () => {
         </div>
         <div className="w-full flex flex-col justify-center gap-6 text-center md:text-left">
           <h2 className="font-bold text-4xl relative leading-relaxed text-pink-700 before:content-[''] before:absolute before:bottom-0 before:left-1/2 md:before:-translate-x-0 before:-translate-x-1/2 md:before:left-0 before:w-32 before:h-1 before:bg-pink-700">
-            Hwo we are?
+            Who we are?
           </h2>
           <p className="text-slate-700 leading-relaxed text-base">
-            At EventMaster, we turn your dreams into reality. With [X] years of
+            At EventMaster, we turn your dreams into reality. With 5 years of
             experience, we specialize in crafting unforgettable events, from
             corporate conferences to weddings and themed parties. We're here to
             make every occasion special.
