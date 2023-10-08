@@ -14,7 +14,7 @@ const ErrorPage = () => {
       }}
       className="w-full min-h-screen flex justify-center items-center select-none py-5 px-3"
     >
-      <div className="flex flex-col justify-center items-center backdrop-blur-sm px-4 py-4 shadow-2xl">
+      <div className="flex flex-col justify-center items-center backdrop-blur-sm px-4 py-4 shadow-2xl text-center">
         <h2 className="text-[25vw] leading-tight font-extrabold text-white text-center">
           404
         </h2>

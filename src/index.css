@@ -17,6 +17,7 @@
 body {
   font-family: var(--primaryFont);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 #root {
   width: 100%;

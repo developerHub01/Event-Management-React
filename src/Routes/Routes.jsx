@@ -6,7 +6,6 @@ import Home from "../Pages/Home";
 import ErrorPage from "../Pages/ErrorPage";
 import LoginPage from "../Pages/LoginPage";
 import SignUpPage from "../Pages/SignUpPage";
-import About from "../Pages/About";
 import EventPage from "../Pages/EventPage";
 import ProfilePage from "../Pages/ProfilePage";
 import PrivateRoute from "../Components/PrivateRoute";
@@ -14,15 +13,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    // errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
       },
       {
         path: "/event",
