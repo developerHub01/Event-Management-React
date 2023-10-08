@@ -1,0 +1,6 @@
+#navbar .active,
+#navbar a:hover {
+  color: #fff;
+  background: #be185d;
+  transition: all 0.3s ease-in-out;
+}
