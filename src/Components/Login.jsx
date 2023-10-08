@@ -27,12 +27,10 @@ const Login = () => {
   };
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(loginData);
 
     signInUser()
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
         <ToastComponent successOrError={false} message="Login successful" />;
         navigate("/");
       })
@@ -50,7 +48,6 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         const user = result.user;
-        console.log(user);
         toast(
           <ToastComponent successOrError={true} message="Signin successfull" />
         );
@@ -67,7 +64,6 @@ const Login = () => {
     facebookSignIn()
       .then((result) => {
         const user = result.user;
-        console.log(user);
         toast(
           <ToastComponent successOrError={true} message="Signin successfull" />
         );
@@ -126,10 +122,9 @@ const Login = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="backdrop-blur-sm p-4 rounded-md text-center flex flex-col gap-5 justify-center items-center">
+        <div className="backdrop-blur-sm p-4 rounded-md text-center flex flex-col gap-5 justify-center items-center shadow-2xl">
           <p className="text-white leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            enim soluta quis voluptatibus dolores delectus.
+          Log in to access your account, manage settings, and enjoy personalized features securely.
           </p>
           <div className="w-full flex flex-col justify-center items-start gap-3 sm:flex-row md:flex-col">
             <button

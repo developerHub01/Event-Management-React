@@ -22,7 +22,8 @@ const SignUp = () => {
     password: "",
   });
 
-  const { createUser, googleSignIn, facebookSignIn } = useContext(AuthContext);
+  const { createUser, googleSignIn, facebookSignIn, emailVerification } =
+    useContext(AuthContext);
   const handleOnChange = (e) => {
     setSignUpData((prev) => ({
       ...signUpData,
@@ -54,6 +55,15 @@ const SignUp = () => {
       .then((userCredential) => {
         const user = userCredential.user;
 
+        emailVerification().then(() => {
+          toast(
+            <ToastComponent
+              successOrError={true}
+              message="Confirm your email address."
+            />
+          );
+        });
+
         updateProfile(auth.currentUser, {
           displayName: name,
           photoURL,
@@ -72,6 +82,7 @@ const SignUp = () => {
 
         setSignUpData({
           name: "",
+          photoURL: "",
           email: "",
           password: "",
         });
@@ -179,10 +190,10 @@ const SignUp = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="backdrop-blur-sm p-4 rounded-md text-center flex flex-col gap-5 justify-center items-center">
+        <div className="backdrop-blur-sm p-4 rounded-md text-center flex flex-col gap-5 justify-center items-center shadow-2xl">
           <p className="text-white leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            enim soluta quis voluptatibus dolores delectus.
+            Join us! Register an account to access exclusive features and
+            content. Sign up now for free.
           </p>
           <div className="w-full flex flex-col justify-center items-start gap-3 sm:flex-row md:flex-col">
             <button
