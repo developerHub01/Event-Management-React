@@ -6,18 +6,23 @@ import { LoadingContext } from "./Context/LoadingProvider";
 import Loader from "./Components/Loader";
 import Navigation from "./Components/Navigation/Navigation";
 import Footer from "./Components/Footer/Footer";
+import { GalleryImgContext } from "./Context/GalleryImgProvider";
+import ImgPreviewPopUp from "./Components/ImgPreviewPopUp";
 
-function App() {
+const App = () => {
   const { isLoading } = useContext(LoadingContext);
+  const { galleryImg } = useContext(GalleryImgContext);
   return (
     <>
       <Navigation />
       <Outlet />
       <Footer />
+      {/* Non major component */}
+      {galleryImg && <ImgPreviewPopUp />}
       <ToastContainer />
       {isLoading && <Loader />}
     </>
   );
-}
+};
 
 export default App;

@@ -3,6 +3,7 @@ import HomeBanner from "../Components/HomeBannerSlider/HomeBanner";
 import AboutUs from "../Components/AboutUs";
 import ClientSection from "../Components/ClientSlider/ClientSection";
 import Services from "../Components/Services/Services";
+import GallerySection from "../Components/GallerySection";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <AboutUs />
       <Services />
       <ClientSection />
+      <GallerySection />
     </>
   );
 };
