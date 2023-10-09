@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logout from "./Logout";
+import Logout from "../Logout";
 
 import { HiBars3BottomLeft, HiMiniXMark } from "react-icons/hi2";
 
-import "./Styles/Navigation.css";
-import { AuthContext } from "../Context/AuthProvider";
+import "./Navigation.css";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const Navigation = () => {
   const { user } = useContext(AuthContext);
@@ -73,6 +73,15 @@ const Navigation = () => {
               onClick={() => setCloseNavbar((prev) => !prev)}
             >
               Event
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/service"
+              className="text-white lg:text-slate-800 rounded-md py-3 px-5 select-none"
+              onClick={() => setCloseNavbar((prev) => !prev)}
+            >
+              Service
             </NavLink>
           </li>
           <li onClick={handleCloseNevbar} className="inline-block lg:hidden">

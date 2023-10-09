@@ -9,6 +9,7 @@ import SignUpPage from "../Pages/SignUpPage";
 import EventPage from "../Pages/EventPage";
 import ProfilePage from "../Pages/ProfilePage";
 import PrivateRoute from "../Components/PrivateRoute";
+import ServicePage from "../Pages/ServicePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUpPage />,
+      },
+      {
+        path: "/service/:id",
+        element: <ServicePage />,
       },
       {
         path: "/profile",

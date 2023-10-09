@@ -1,5 +1,5 @@
 import React from "react";
-import HomeBannerSlider from "./HomeBannerSlider/HomeBannerSlider";
+import HomeBannerSlider from "./HomeBannerSlider";
 import HomeBannerContent from "./HomeBannerContent";
 
 const HomeBanner = () => {

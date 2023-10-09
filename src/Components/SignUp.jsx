@@ -129,7 +129,7 @@ const SignUp = () => {
   return (
     <div className="w-[90%] max-w-3xl min-h-[500px] shadow-2xl grid md:grid-cols-2 mx-auto rounded-xl overflow-hidden">
       <div className="w-full h-full grid place-items-center p-5 gap-6 md:order-2">
-        <h2 className="text-3xl font-semibold select-none">Signup</h2>
+        <h2 className="text-3xl font-semibold select-none text-pink-700">Signup</h2>
         <form
           className="w-full h-full flex flex-col gap-5"
           onSubmit={handleOnSubmit}

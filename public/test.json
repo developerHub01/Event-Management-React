@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "Full-Service Wedding Planning and Coordination",
+    "description": "Our Full-Service Wedding Planning and Coordination package are designed to bring your wedding dreams to life. We understand that planning a wedding can be a daunting task, but with our experienced team by your side, you can relax and enjoy every moment of the journey from engagement to saying \"I do.\" Imagine a wedding day where you are free to savor the joy and celebration without worrying about logistics and details. Our comprehensive approach covers every aspect of your wedding, from venue selection and decor design to catering, attire consultation, photography, and entertainment. We'll make sure your wedding day is stress-free and truly magical.",
+    "price": 3000,
+    "serviceImg": "https://i.ibb.co/0V8sJxW/Full-Service-Wedding-Planning-and-Coordination.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Venue Selection and Booking",
+    "description": "Choosing the perfect wedding venue is a critical decision. Our experts will assist you in finding and securing the ideal location for your wedding ceremony and reception. We consider your preferences, guest count, and budget to recommend venues that match your vision. With our assistance, you can rest assured that your wedding venue will be both beautiful and practical.",
+    "price": 800,
+    "serviceImg": "https://i.ibb.co/jZvjnbK/Venue-Selection-and-Booking.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Wedding Theme and Decor Design",
+    "description": "Transform your wedding into a visually stunning experience with our theme and decor design services. Our team will collaborate with you to create a unique and personalized wedding theme. We'll handle decor selection, floral arrangements, lighting, and every aesthetic detail. Let us turn your wedding venue into a magical and enchanting setting.",
+    "price": 1200,
+    "serviceImg": "https://i.ibb.co/JBw7yst/Wedding-Theme-and-Decor-Design.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Catering Services and Menu Planning",
+    "description": "Delight your guests with a culinary experience they won't forget. Our catering team will craft a menu that reflects your preferences and dietary needs. From appetizers to desserts, we'll ensure that your wedding feast is a culinary delight that leaves a lasting impression.",
+    "price": 1500,
+    "serviceImg": "https://i.ibb.co/89Y3PXW/Catering-Services-and-Menu-Planning.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Bridal and Groomsmen Attire Consultation",
+    "description": "Look your best on your big day with our bridal and groomsmen attire consultation. Our fashion experts will guide you in selecting the perfect wedding attire that suits your style, body type, and wedding theme. We'll ensure you and your bridal party shine with confidence.",
+    "price": 400,
+    "serviceImg": "https://i.ibb.co/qmwDzqQ/Bridal-and-Groomsmen-Attire-Consultation.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Photography and Videography Services",
+    "description": "Capture every special moment with our professional photography and videography services. Our experienced team will document your wedding day, creating lasting memories. From candid shots to cinematic videos, we'll preserve the beauty and emotions of your wedding.",
+    "price": 1200,
+    "serviceImg": "https://i.ibb.co/3YLrwzH/Photography-and-Videography-Services.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Music and Entertainment Bookings",
+    "description": "Ensure your wedding is filled with entertainment that suits your style. We'll book talented musicians, DJs, or other entertainment options to keep your guests dancing and having a great time. Your wedding day will be filled with music that sets the perfect mood.",
+    "price": 800,
+    "serviceImg": "https://i.ibb.co/qCWpStN/Music-and-Entertainment-Bookings.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Wedding Ceremony and Reception Coordination",
+    "description": "Relax and enjoy your wedding day while we handle all the details. Our coordination team will ensure that the ceremony and reception run smoothly. From cueing the bridal party to managing the timeline, we'll oversee every aspect of your wedding day.",
+    "price": 900,
+    "serviceImg": "https://i.ibb.co/h2Dcr93/Wedding-Ceremony-and-Reception-Coordination.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Transportation Arrangements",
+    "description": "Simplify transportation logistics for your wedding day. We'll arrange transportation for you, your bridal party, and guests, ensuring everyone arrives at the right place and on time. From elegant limousines to shuttle services, we've got your transportation needs covered.",
+    "price": 600,
+    "serviceImg": "https://i.ibb.co/YZYs1BH/Transportation-Arrangements.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Wedding Invitation Design and RSVP Management",
+    "description": "Set the tone for your wedding with beautifully designed invitations. Our design team will create customized wedding invitations that match your theme and style. We'll also manage RSVPs, making it easy to track your guest list and seating arrangements.",
+    "price": 350,
+    "serviceImg": "https://i.ibb.co/fMjcNrX/Wedding-Invitation-Design-and-RSVP-Management.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Cake and Dessert Table Design",
+    "description": "Delight your guests with a stunning wedding cake and dessert table. We'll work with talented bakers to design and create a cake that not only tastes amazing but also complements your wedding decor. Our dessert table design will leave a sweet impression on your guests.",
+    "price": 500,
+    "serviceImg": "https://i.ibb.co/Xx03wL4/Cake-and-Dessert-Table-Design.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Games and Activities for Children's Parties",
+    "description": "Make your child's birthday party unforgettable with fun and engaging games and activities. We'll organize age-appropriate games, crafts, and entertainment to keep the little ones entertained throughout the celebration. Let us create a memorable experience for your child and their friends.",
+    "price": 350,
+    "serviceImg": "https://i.ibb.co/HGwPbPf/Games-and-Activities-for-Children-s-Parties.jpg"
+  }
+]

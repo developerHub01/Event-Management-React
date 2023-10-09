@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LoadingContext } from "../Context/LoadingProvider";
 
-const useFetch = (url) => {
+const useFetchWIthFilter = (url, prop, value) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [getError, setGetError] = useState(null);
@@ -10,13 +10,15 @@ const useFetch = (url) => {
     fetch(url)
       .then((res) => {
         if (!res.ok) {
-          setLoadingStatus((prev) => false);
           return Error("Fetcing is not successful");
+          setLoadingStatus((prev) => false);
         }
         return res.json();
       })
       .then((data) => {
-        setData((prev) => data);
+        setData(
+          (prev) => data.filter((item) => item[prop] + "" === "" + value)[0]
+        );
         setGetError((prev) => null);
         setIsLoading((prev) => false);
         setLoadingStatus((prev) => false);
@@ -30,5 +32,4 @@ const useFetch = (url) => {
 
   return { data, isLoading, getError };
 };
-
-export default useFetch;
+export default useFetchWIthFilter;
