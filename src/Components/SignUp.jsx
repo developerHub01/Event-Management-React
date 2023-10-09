@@ -13,6 +13,7 @@ import auth from "../firebase/config";
 import ToastComponent from "./ToastComponent";
 
 import * as EmailValidator from "email-validator";
+import usePasswordVarification from "../CustomHook/usePasswordVarification";
 
 const SignUp = () => {
   const [signUpData, setSignUpData] = useState({
@@ -22,8 +23,7 @@ const SignUp = () => {
     password: "",
   });
 
-  const { createUser, googleSignIn, facebookSignIn, emailVerification } =
-    useContext(AuthContext);
+  const { createUser, googleSignIn, facebookSignIn } = useContext(AuthContext);
   const handleOnChange = (e) => {
     setSignUpData((prev) => ({
       ...signUpData,
@@ -32,9 +32,8 @@ const SignUp = () => {
   };
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password, photoURL } = signUpData;
 
-    const regexPassword = /^(?=.*[A-Z])(?=.*\W).{6,}$/;
+    const { name, email, password, photoURL } = signUpData;
 
     if (!EmailValidator.validate(email)) {
       return toast(
@@ -42,7 +41,7 @@ const SignUp = () => {
       );
     }
 
-    if (!regexPassword.test(password)) {
+    if (!usePasswordVarification(password)) {
       return toast(
         <ToastComponent
           successOrError={false}
@@ -54,15 +53,6 @@ const SignUp = () => {
     createUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-
-        emailVerification().then(() => {
-          toast(
-            <ToastComponent
-              successOrError={true}
-              message="Confirm your email address."
-            />
-          );
-        });
 
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -129,7 +119,9 @@ const SignUp = () => {
   return (
     <div className="w-[90%] max-w-3xl min-h-[500px] shadow-2xl grid md:grid-cols-2 mx-auto rounded-xl overflow-hidden">
       <div className="w-full h-full grid place-items-center p-5 gap-6 md:order-2">
-        <h2 className="text-3xl font-semibold select-none text-pink-700">Signup</h2>
+        <h2 className="text-3xl font-semibold select-none text-pink-700">
+          Signup
+        </h2>
         <form
           className="w-full h-full flex flex-col gap-5"
           onSubmit={handleOnSubmit}
@@ -150,7 +142,6 @@ const SignUp = () => {
             placeholder="Enter your photoURL"
             value={signUpData.photoURL}
             onChange={handleOnChange}
-            required
           />
           <input
             type="email"

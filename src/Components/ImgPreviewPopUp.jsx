@@ -7,6 +7,7 @@ const ImgPreviewPopUp = () => {
   const { galleryImg, setGalleryImg } = useContext(GalleryImgContext);
   const closeImgPopUp = () => {
     setGalleryImg((prev) => "");
+    
   };
   const handlePreviewPopEvent = (e) => {
     if (e.target.tagName.toLowerCase() === "img") return;

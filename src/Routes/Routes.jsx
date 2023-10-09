@@ -6,16 +6,16 @@ import Home from "../Pages/Home";
 import ErrorPage from "../Pages/ErrorPage";
 import LoginPage from "../Pages/LoginPage";
 import SignUpPage from "../Pages/SignUpPage";
-import EventPage from "../Pages/EventPage";
 import ProfilePage from "../Pages/ProfilePage";
 import PrivateRoute from "../Components/PrivateRoute";
 import ServicePage from "../Pages/ServicePage";
 import AboutPage from "../Pages/AboutPage";
+import MyEventPage from "../Pages/MyEventPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -26,10 +26,10 @@ const router = createBrowserRouter([
         element: <AboutPage />,
       },
       {
-        path: "/event",
+        path: "/myevent",
         element: (
           <PrivateRoute>
-            <EventPage />,
+            <MyEventPage />,
           </PrivateRoute>
         ),
       },

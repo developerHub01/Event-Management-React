@@ -25,6 +25,7 @@ const ClientSlider = () => {
       {isLoading ||
         (data && (
           <Swiper
+            grabCursor={true}
             slidesPerView={1}
             spaceBetween={30}
             loop={true}

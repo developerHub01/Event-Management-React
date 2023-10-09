@@ -16,6 +16,7 @@ const Footer = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="w-[90%] max-w-6xl mx-auto relative z-30 grid grid-cols-4 gap-10">
@@ -84,10 +85,10 @@ const Footer = () => {
             </li>
             <li>
               <NavLink
-                to="/event"
+                to="/myevent"
                 className="text-gray-50 transition-all delay-75"
               >
-                Event List
+                My Event List
               </NavLink>
             </li>
           </ul>

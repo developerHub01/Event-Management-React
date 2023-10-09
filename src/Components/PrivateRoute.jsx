@@ -3,15 +3,15 @@ import { AuthContext } from "../Context/AuthProvider";
 import { LoadingContext } from "../Context/LoadingProvider";
 import { Navigate } from "react-router-dom";
 
-const PrivateRoute = ({ children }) => {;
+const PrivateRoute = ({ children }) => {
   const { isLoading } = useContext(LoadingContext);
   const { user } = useContext(AuthContext);
-  console.log(user);
-  return (
-    <>
-      {isLoading || user ? children : <Navigate to='/login' replace={true} /> }
-    </>
-  );
+
+  if (!user || isLoading) { 
+    console.log("===================");
+    return <Navigate to="/login" replace={true} />;
+  }
+  return children;
 };
 
 export default PrivateRoute;

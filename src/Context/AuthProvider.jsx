@@ -26,10 +26,6 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const emailVerification = () => {
-    return sendEmailVerification(auth.currentUser);
-  };
-
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
   const googleSignIn = () => {
@@ -55,7 +51,6 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     user,
     createUser,
-    emailVerification,
     googleSignIn,
     facebookSignIn,
     signInUser,

@@ -26,6 +26,7 @@ const HomeBannerSlider = () => {
           <Swiper
             grabCursor={true}
             effect={"creative"}
+            loop={true}
             creativeEffect={{
               prev: {
                 shadow: true,
@@ -44,7 +45,10 @@ const HomeBannerSlider = () => {
           >
             {isLoading ||
               data.map((item) => (
-                <SwiperSlide key={item.id} className="rounded-xl overflow-auto max-h-[450px]">
+                <SwiperSlide
+                  key={item.id}
+                  className="rounded-xl overflow-auto max-h-[450px]"
+                >
                   <img
                     src={item.imgLink}
                     alt=""
