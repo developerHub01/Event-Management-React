@@ -11,6 +11,7 @@ import PrivateRoute from "../Components/PrivateRoute";
 import ServicePage from "../Pages/ServicePage";
 import AboutPage from "../Pages/AboutPage";
 import MyEventPage from "../Pages/MyEventPage";
+import EventPage from "../Pages/EventPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+      },
+      {
+        path: "/event",
+        element: <EventPage />,
       },
       {
         path: "/myevent",

@@ -68,6 +68,15 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
+              to="/event"
+              className="text-white lg:text-slate-800 rounded-md py-3 px-5 select-none"
+              onClick={() => setCloseNavbar((prev) => !prev)}
+            >
+              Event
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/myevent"
               className="text-white lg:text-slate-800 rounded-md py-3 px-5 select-none"
               onClick={() => setCloseNavbar((prev) => !prev)}

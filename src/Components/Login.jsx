@@ -9,12 +9,14 @@ import ToastComponent from "./ToastComponent";
 import { AuthContext } from "../Context/AuthProvider";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
+  const [passwordShowHide, setPasswordShowHide] = useState(false);
   const navigate = useNavigate();
 
   const { googleSignIn, facebookSignIn, signInUser } = useContext(AuthContext);
@@ -79,7 +81,9 @@ const Login = () => {
   return (
     <div className="w-[90%] max-w-3xl min-h-[500px] shadow-2xl grid md:grid-cols-2 mx-auto rounded-xl overflow-hidden">
       <div className="w-full h-full grid place-items-center p-5 gap-6 md:order-2">
-        <h2 className="text-3xl font-semibold select-none text-pink-700">Login</h2>
+        <h2 className="text-3xl font-semibold select-none text-pink-700">
+          Login
+        </h2>
         <form
           className="w-full h-full flex flex-col gap-5"
           onSubmit={handleOnSubmit}
@@ -93,15 +97,25 @@ const Login = () => {
             onChange={handleOnChange}
             required
           />
-          <input
-            type="password"
-            name="password"
-            className="py-2 px-4 outline-none bg-transparent border-b-2 border-pink-700 w-full"
-            placeholder="Enter your password"
-            value={loginData.password}
-            onChange={handleOnChange}
-            required
-          />
+          <div className="w-full flex justify-center items-center border-b-2 border-pink-700">
+            <input
+              type={passwordShowHide ? "text" : "password"}
+              name="password"
+              className="py-2 px-4 outline-none bg-transparent w-full"
+              placeholder="Enter your password"
+              value={loginData.password}
+              onChange={handleOnChange}
+              required
+            />
+            <span
+              className="w-14 h-ful text-pink-700 grid place-items-center text-2xl cursor-pointer"
+              onClick={() => {
+                setPasswordShowHide((prev) => !prev);
+              }}
+            >
+              {passwordShowHide ? <AiFillEyeInvisible /> : <AiFillEye />}
+            </span>
+          </div>
           <button className="w-full bg-pink-700 text-white rounded-md py-3 px-5">
             Login
           </button>
@@ -124,7 +138,8 @@ const Login = () => {
       >
         <div className="backdrop-blur-sm p-4 rounded-md text-center flex flex-col gap-5 justify-center items-center shadow-2xl">
           <p className="text-white leading-relaxed">
-          Log in to access your account, manage settings, and enjoy personalized features securely.
+            Log in to access your account, manage settings, and enjoy
+            personalized features securely.
           </p>
           <div className="w-full flex flex-col justify-center items-start gap-3 sm:flex-row md:flex-col">
             <button

@@ -85,6 +85,14 @@ const Footer = () => {
             </li>
             <li>
               <NavLink
+                to="/event"
+                className="text-gray-50 transition-all delay-75"
+              >
+                All Event List
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/myevent"
                 className="text-gray-50 transition-all delay-75"
               >

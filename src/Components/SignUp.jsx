@@ -14,6 +14,7 @@ import ToastComponent from "./ToastComponent";
 
 import * as EmailValidator from "email-validator";
 import usePasswordVarification from "../CustomHook/usePasswordVarification";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const SignUp = () => {
   const [signUpData, setSignUpData] = useState({
@@ -22,6 +23,7 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+  const [passwordShowHide, setPasswordShowHide] = useState(false);
 
   const { createUser, googleSignIn, facebookSignIn } = useContext(AuthContext);
   const handleOnChange = (e) => {
@@ -152,15 +154,25 @@ const SignUp = () => {
             onChange={handleOnChange}
             required
           />
-          <input
-            type="password"
-            name="password"
-            className="py-2 px-4 outline-none bg-transparent border-b-2 border-pink-700 w-full"
-            placeholder="Enter your password"
-            value={signUpData.password}
-            onChange={handleOnChange}
-            required
-          />
+          <div className="w-full flex justify-center items-center border-b-2 border-pink-700">
+            <input
+              type={passwordShowHide ? "text" : "password"}
+              name="password"
+              className="py-2 px-4 outline-none bg-transparent w-full"
+              placeholder="Enter your password"
+              value={signUpData.password}
+              onChange={handleOnChange}
+              required
+            />
+            <span
+              className="w-14 h-ful text-pink-700 grid place-items-center text-2xl cursor-pointer"
+              onClick={() => {
+                setPasswordShowHide((prev) => !prev);
+              }}
+            >
+              {passwordShowHide ? <AiFillEyeInvisible /> : <AiFillEye />}
+            </span>
+          </div>
           <button className="w-full bg-pink-700 text-white rounded-md py-3 px-5">
             Signup
           </button>
