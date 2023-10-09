@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { BsCurrencyDollar } from "react-icons/bs";
 import { useParams } from "react-router-dom";
-import useFetch from "../CustomHook/useFetch";
 import useFetchWIthFilter from "../CustomHook/useFetchWIthFilter";
+import { toast } from "react-toastify";
+import ToastComponent from "../Components/ToastComponent";
+import useGetSetLocalStorage from "../CustomHook/useGetSetLocalStorage";
 
 const url =
   "https://raw.githubusercontent.com/developerHub01/Event-managemenet-fake-data/main/service-list.json";
@@ -13,7 +15,22 @@ const ServicePage = () => {
 
   const { data, isLoading, getError } = useFetchWIthFilter(url, "id", id);
 
-  console.log(data);
+  const { setEventList } = useGetSetLocalStorage();
+
+  const handleAddService = (e) => {
+    try {
+      setEventList("purchaseEventList", data);
+      toast(
+        <ToastComponent
+          successOrError={true}
+          message="Add To Cart Successful"
+        />
+      );
+    } catch (error) {
+      console.log(error);
+      toast(<ToastComponent successOrError={true} message={error.message} />);
+    }
+  };
 
   return (
     <section className="w-[90%] mx-auto max-w-6xl">
@@ -25,7 +42,7 @@ const ServicePage = () => {
               <div className="w-full overflow-hidden rounded-xl">
                 <img
                   src={data?.serviceImg}
-                  alt=""
+                  alt={data?.title}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -45,7 +62,10 @@ const ServicePage = () => {
                 Price: <span className="text-slate-800">300</span>{" "}
                 <BsCurrencyDollar className="text-pink-700 text-2xl" />{" "}
               </span>
-              <button className="bg-pink-700 text-white rounded-md py-3 px-5">
+              <button
+                className="bg-pink-700 text-white rounded-md py-3 px-5"
+                onClick={handleAddService}
+              >
                 Add Event...
               </button>
             </div>

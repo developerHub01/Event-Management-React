@@ -75,15 +75,6 @@ const Navigation = () => {
               Event
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/service"
-              className="text-white lg:text-slate-800 rounded-md py-3 px-5 select-none"
-              onClick={() => setCloseNavbar((prev) => !prev)}
-            >
-              Service
-            </NavLink>
-          </li>
           <li onClick={handleCloseNevbar} className="inline-block lg:hidden">
             <HiMiniXMark className="absolute top-4 right-4 text-4xl cursor-pointer text-white" />
           </li>

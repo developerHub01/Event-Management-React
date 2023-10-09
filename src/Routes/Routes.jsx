@@ -22,7 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/event",
-        element: <EventPage />,
+        element: (
+          <PrivateRoute>
+            <EventPage />,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -34,7 +38,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/service/:id",
-        element: <ServicePage />,
+        element: (
+          <PrivateRoute>
+            <ServicePage />,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/profile",
