@@ -1,6 +1,5 @@
-Live Link: 
+Live Link: https://event-management-26e83.web.app/
 ------------------
-
 
 
 # Project Features:
