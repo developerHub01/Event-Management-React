@@ -24,10 +24,13 @@ const VerifiedCompo = ({ verified }) => {
 };
 
 const Profile = () => {
-  console.log("==================");
   const { user } = useContext(AuthContext);
   return (
-    <div className="w-[90%] max-w-md px-6 py-10 flex flex-col justify-center items-center shadow-2xl rounded-xl">
+    <div
+      data-aos="zoom-in"
+      data-aos-once
+      className="w-[90%] max-w-md px-6 py-10 flex flex-col justify-center items-center shadow-2xl rounded-xl"
+    >
       <figure className="w-full flex flex-col gap-4 justify-center items-center">
         <div className="w-full max-w-[250px] aspect-square overflow-hidden rounded-full border-8 border-pink-700 cursor-pointer hover:scale-90 transition-all duration-100 shadow-xl">
           <img

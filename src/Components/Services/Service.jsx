@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 
 const Service = ({ id, title, description, price, serviceImg }) => {
   return (
-    <figure className="w-full rounded-xl flex-grow overflow-hidden flex flex-col shadow-2xl hover:scale-95 transition-all ease-in-out duration-75 cursor-pointer">
+    <figure
+      data-aos="zoom-in"
+      data-aos-once
+      className="h-full w-full rounded-xl flex-grow overflow-hidden flex flex-col shadow-2xl hover:scale-95 transition-all ease-in-out duration-75 cursor-pointer"
+    >
       <div className="w-full h-60">
         <img src={serviceImg} alt="" className="w-full h-full object-cover" />
       </div>

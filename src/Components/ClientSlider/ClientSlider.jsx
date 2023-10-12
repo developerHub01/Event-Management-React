@@ -20,7 +20,11 @@ const url =
 const ClientSlider = () => {
   const { data, isLoading, getError } = useFetch(url);
   return (
-    <div className="w-full col-span-2 px-3 flex-grow">
+    <div
+      data-aos="zoom-in-left"
+      data-aos-once
+      className="w-full col-span-2 px-3 flex-grow"
+    >
       {getError && <span>{getError}</span>}
       {isLoading ||
         (data && (

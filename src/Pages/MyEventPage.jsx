@@ -5,9 +5,9 @@ import useGetSetLocalStorage from "../CustomHook/useGetSetLocalStorage";
 const MyEventPage = () => {
   const { getEventList } = useGetSetLocalStorage();
   return (
-    <div className="flex justify-center items-center">
+    <div className="min-h-screen w-full flex justify-center items-center">
       <div
-        className={`w-[90%] max-w-6xl mx-auto min-h-screen py-5 place-items-center grid ${
+        className={`w-[90%] max-w-6xl mx-auto  py-5 place-items-center grid ${
           getEventList("purchaseEventList") &&
           "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         } gap-5`}

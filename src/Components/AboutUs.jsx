@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { CgDetailsMore } from "react-icons/cg";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
@@ -6,12 +6,21 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import errorPage from "../assets/errorPage.jpg";
 import wedding1 from "../assets/wedding1.jpg";
 import { Link } from "react-router-dom";
+import { RefContext } from "../Context/RefProvider";
 
 const AboutUs = () => {
+  const {aboutRef} = useContext(RefContext)
   return (
-    <section className="w-full min-h-screen grid place-items-center">
+    <section
+      className="w-full min-h-[90vh] grid place-items-center"
+      ref={aboutRef}
+    >
       <div className="w-[90%] max-w-6xl mx-auto py-20 grid grid-cols-1 md:grid-cols-2 gap-10 gap-y-14 place-items-center">
-        <div className="min-h-[350px] max-h-[450px] w-full h-full relative flex justify-center">
+        <div
+          data-aos="zoom-in-right"
+          data-aos-once
+          className="min-h-[350px] max-h-[450px] w-full h-full relative flex justify-center"
+        >
           <img
             src={errorPage}
             alt=""
@@ -26,7 +35,11 @@ const AboutUs = () => {
             <CgDetailsMore className="text-white" /> <span>Hint about us</span>
           </h4>
         </div>
-        <div className="w-full flex flex-col justify-center gap-6 text-center md:text-left">
+        <div
+          data-aos="zoom-in-left"
+          data-aos-once
+          className="w-full flex flex-col justify-center gap-6 text-center md:text-left"
+        >
           <h2 className="font-bold text-4xl relative leading-relaxed text-pink-700 before:content-[''] before:absolute before:bottom-0 before:left-1/2 md:before:-translate-x-0 before:-translate-x-1/2 md:before:left-0 before:w-32 before:h-1 before:bg-pink-700">
             Who we are?
           </h2>

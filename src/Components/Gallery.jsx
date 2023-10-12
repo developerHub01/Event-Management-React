@@ -19,6 +19,8 @@ const Gallery = () => {
           data.map((item) => (
             <figure
               key={item.id}
+              data-aos="zoom-in"
+              data-aos-once
               className="h-full w-full aspect-square overflow-hidden rounded-lg shadow-xl cursor-pointer"
             >
               <img

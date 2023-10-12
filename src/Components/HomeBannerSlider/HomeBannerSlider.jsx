@@ -19,7 +19,11 @@ const HomeBannerSlider = () => {
   const { data, isLoading, getError } = useFetch(url);
   console.log(data);
   return (
-    <div className="w-full grid place-items-center lg:order-2">
+    <div
+      data-aos="zoom-in-left"
+      data-aos-once
+      className="w-full grid place-items-center lg:order-2"
+    >
       {getError && <span>{getError}</span>}
       {isLoading ||
         (data && (

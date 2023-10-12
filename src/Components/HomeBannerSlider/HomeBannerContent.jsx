@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { RefContext } from "../../Context/RefProvider";
 
 const HomeBannerContent = () => {
+  const { moveToAbout, moveToServices } = useContext(RefContext);
   return (
-    <div className="text-center lg:text-left flex flex-col justify-center items-center lg:items-start w-full max-w-xl gap-4">
+    <div
+      data-aos="zoom-in-right"
+      data-aos-once
+      className="text-center lg:text-left flex flex-col justify-center items-center lg:items-start w-full max-w-xl gap-4"
+    >
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-normal md:leading-snug text-pink-700">
         Elevate Your Social Events with Us
       </h2>
@@ -17,10 +23,16 @@ const HomeBannerContent = () => {
         you create the perfect event that reflects your style and personality.
       </p>
       <div className="flex flex-col sm:flex-row justify-normal items-center gap-3">
-        <button className="w-full sm:w-auto bg-pink-700 text-white rounded-md py-3 px-5">
+        <button
+          className="w-full sm:w-auto bg-pink-700 text-white rounded-md py-3 px-5"
+          onClick={moveToAbout}
+        >
           Learn More
         </button>
-        <button className="w-full sm:w-auto bg-pink-700 text-white rounded-md py-3 px-5">
+        <button
+          className="w-full sm:w-auto bg-pink-700 text-white rounded-md py-3 px-5"
+          onClick={moveToServices}
+        >
           View Out Services
         </button>
       </div>

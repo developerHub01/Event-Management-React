@@ -1,6 +1,6 @@
-import React from 'react'
-import AboutUs from '../Components/AboutUs'
-import TeamSection from '../Components/Team/TeamSection'
+import React from "react";
+import AboutUs from "../Components/AboutUs";
+import TeamSection from "../Components/Team/TeamSection";
 
 const AboutPage = () => {
   return (
@@ -8,7 +8,7 @@ const AboutPage = () => {
       <AboutUs />
       <TeamSection />
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
