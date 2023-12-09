@@ -2,6 +2,34 @@ Live Link: https://event-management-26e83.web.app/
 ------------------
 
 
+<h1 align="center">Used technology:</h1>
+<p align="center">
+  <span>
+    <img src="https://skillicons.dev/icons?i=html" align="center">
+  </span>
+  &nbsp;&nbsp;
+  <span>
+    <img src="https://skillicons.dev/icons?i=css" align="center">
+  </span>
+   &nbsp;&nbsp;
+  <span>
+    <img src="https://skillicons.dev/icons?i=js" align="center">
+  </span>
+   &nbsp;&nbsp;
+  <span>
+    <img src="https://skillicons.dev/icons?i=tailwind" align="center">
+  </span>
+   &nbsp;&nbsp;
+  <span>
+    <img src="https://skillicons.dev/icons?i=react" align="center">
+  </span>
+   &nbsp;&nbsp;
+  <span>
+    <img src="https://skillicons.dev/icons?i=firebase" align="center">
+  </span>
+</p
+
+
 # Project Features:
 ---------
 
