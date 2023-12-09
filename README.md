@@ -2,8 +2,8 @@ Live Link: https://event-management-26e83.web.app/
 ------------------
 
 
-<h1 align="center">Used technology:</h1>
-<p align="center">
+<h1>Used technology:</h1>
+<p>
   <span>
     <img src="https://skillicons.dev/icons?i=html" align="center">
   </span>
